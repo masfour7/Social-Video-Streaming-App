@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Video App — Interactive Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-bg">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>🎬 Social Video App</h1>
+        <p class="subtitle">A TikTok-style video platform built with <strong>Flutter</strong> &amp; <strong>Firebase</strong></p>
+        <div class="badges">
+          <span class="badge flutter">Flutter</span>
+          <span class="badge dart">Dart</span>
+          <span class="badge firebase">Firebase</span>
+          <span class="badge mobile">Android · iOS</span>
+        </div>
+        <div class="hero-links">
+          <a class="btn-primary" href="https://github.com/masfour7/Social-Video-Streaming-App" target="_blank">⭐ View on GitHub</a>
+          <a class="btn-secondary" href="#how-it-works">How it works ↓</a>
+        </div>
+      </div>
+      <div class="phone-wrapper">
+        <div class="phone-notch"></div>
+        <div class="phone-frame">
+          <div class="phone-screen" id="app">
+
+            <!-- FEED SCREEN -->
+            <div class="screen active" id="screen-feed">
+              <div class="feed-container" id="feedContainer">
+
+                <div class="video-card" data-gradient="0">
+                  <div class="video-bg grad0">
+                    <div class="play-indicator" id="play0">
+                      <div class="play-ring"></div>
+                    </div>
+                    <div class="vid-overlay"></div>
+                  </div>
+                  <div class="video-actions">
+                    <button class="action-btn" onclick="like(this)">
+                      <span class="action-icon">❤️</span>
+                      <span class="action-count">14.2K</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">💬</span>
+                      <span class="action-count">832</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">↗️</span>
+                      <span class="action-count">Share</span>
+                    </button>
+                    <div class="action-btn avatar-btn">
+                      <div class="avatar av1">MA</div>
+                      <div class="follow-dot">+</div>
+                    </div>
+                  </div>
+                  <div class="video-info">
+                    <p class="username">@masfour7</p>
+                    <p class="description">Built this TikTok-style feed from scratch with Flutter 🚀 Real-time Firebase sync, smooth swipe navigation.</p>
+                    <p class="hashtags">#Flutter #Firebase #MobileApp #OpenSource</p>
+                    <div class="music-row">🎵 Original Audio — masfour7</div>
+                  </div>
+                  <div class="progress-bar"><div class="progress-fill" style="width:42%"></div></div>
+                </div>
+
+                <div class="video-card" data-gradient="1">
+                  <div class="video-bg grad1">
+                    <div class="play-indicator">
+                      <div class="play-ring"></div>
+                    </div>
+                    <div class="vid-overlay"></div>
+                  </div>
+                  <div class="video-actions">
+                    <button class="action-btn" onclick="like(this)">
+                      <span class="action-icon">❤️</span>
+                      <span class="action-count">9.7K</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">💬</span>
+                      <span class="action-count">401</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">↗️</span>
+                      <span class="action-count">Share</span>
+                    </button>
+                    <div class="action-btn avatar-btn">
+                      <div class="avatar av2">SR</div>
+                      <div class="follow-dot">+</div>
+                    </div>
+                  </div>
+                  <div class="video-info">
+                    <p class="username">@sarah.r</p>
+                    <p class="description">Morning hike views 🏔️ Nothing beats this sunrise. Would you wake up at 5am for this?</p>
+                    <p class="hashtags">#Nature #Hiking #Sunrise #Travel</p>
+                    <div class="music-row">🎵 Lofi Chill Beats Vol. 3</div>
+                  </div>
+                  <div class="progress-bar"><div class="progress-fill" style="width:71%"></div></div>
+                </div>
+
+                <div class="video-card" data-gradient="2">
+                  <div class="video-bg grad2">
+                    <div class="play-indicator">
+                      <div class="play-ring"></div>
+                    </div>
+                    <div class="vid-overlay"></div>
+                  </div>
+                  <div class="video-actions">
+                    <button class="action-btn" onclick="like(this)">
+                      <span class="action-icon">❤️</span>
+                      <span class="action-count">31.5K</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">💬</span>
+                      <span class="action-count">2.1K</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">↗️</span>
+                      <span class="action-count">Share</span>
+                    </button>
+                    <div class="action-btn avatar-btn">
+                      <div class="avatar av3">JD</div>
+                      <div class="follow-dot">+</div>
+                    </div>
+                  </div>
+                  <div class="video-info">
+                    <p class="username">@jake.dev</p>
+                    <p class="description">Firebase real-time updates are insane ⚡ Watch this video appear in the feed less than 1 second after upload.</p>
+                    <p class="hashtags">#Firebase #Firestore #RealTime #Dev</p>
+                    <div class="music-row">🎵 Coding Vibes Playlist</div>
+                  </div>
+                  <div class="progress-bar"><div class="progress-fill" style="width:25%"></div></div>
+                </div>
+
+                <div class="video-card" data-gradient="3">
+                  <div class="video-bg grad3">
+                    <div class="play-indicator">
+                      <div class="play-ring"></div>
+                    </div>
+                    <div class="vid-overlay"></div>
+                  </div>
+                  <div class="video-actions">
+                    <button class="action-btn" onclick="like(this)">
+                      <span class="action-icon">❤️</span>
+                      <span class="action-count">5.3K</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">💬</span>
+                      <span class="action-count">218</span>
+                    </button>
+                    <button class="action-btn">
+                      <span class="action-icon">↗️</span>
+                      <span class="action-count">Share</span>
+                    </button>
+                    <div class="action-btn avatar-btn">
+                      <div class="avatar av4">LM</div>
+                      <div class="follow-dot">+</div>
+                    </div>
+                  </div>
+                  <div class="video-info">
+                    <p class="username">@luna.m</p>
+                    <p class="description">Street food tour 🍜 Found the best ramen in the city. Hidden gem fr.</p>
+                    <p class="hashtags">#FoodTok #Ramen #StreetFood #Foodie</p>
+                    <div class="music-row">🎵 Tokyo Night Drive</div>
+                  </div>
+                  <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+                </div>
+
+              </div>
+              <div class="swipe-hint" id="swipeHint">
+                <span>Swipe up for next video ↑</span>
+              </div>
+            </div>
+
+            <!-- CAMERA SCREEN -->
+            <div class="screen" id="screen-camera">
+              <div class="camera-bg">
+                <div class="camera-top-bar">
+                  <button class="cam-close" onclick="switchScreen('feed')">✕</button>
+                  <span class="cam-title">Camera</span>
+                  <div class="cam-recording-info" id="recInfo" style="display:none">
+                    <span id="recTime">0 sec</span>
+                    <div class="rec-dot"></div>
+                  </div>
+                </div>
+                <div class="camera-preview">
+                  <div class="cam-grid">
+                    <div class="cam-grid-line h"></div>
+                    <div class="cam-grid-line h" style="top:66%"></div>
+                    <div class="cam-grid-line v"></div>
+                    <div class="cam-grid-line v" style="left:66%"></div>
+                  </div>
+                  <div class="cam-focus-ring" id="focusRing"></div>
+                  <div class="cam-scene">
+                    <div class="cam-particle p1"></div>
+                    <div class="cam-particle p2"></div>
+                    <div class="cam-particle p3"></div>
+                    <div class="cam-particle p4"></div>
+                  </div>
+                </div>
+                <div class="camera-controls">
+                  <button class="cam-flip" onclick="flipCam()">🔄</button>
+                  <div class="record-btn-wrap">
+                    <svg class="record-ring-svg" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+                      <circle id="recProgress" cx="50" cy="50" r="44" fill="none" stroke="#ff3b5c" stroke-width="4"
+                        stroke-dasharray="276.5" stroke-dashoffset="276.5" stroke-linecap="round"
+                        transform="rotate(-90 50 50)"/>
+                    </svg>
+                    <button class="record-btn" id="recordBtn"
+                      onmousedown="startRecord()" onmouseup="stopRecord()"
+                      ontouchstart="startRecord()" ontouchend="stopRecord()"
+                      onclick="snapPhoto()">
+                      <div class="record-inner" id="recordInner"></div>
+                    </button>
+                  </div>
+                  <button class="cam-upload" onclick="showUploadToast()">📁</button>
+                </div>
+                <div class="cam-hint">Tap to snap · Hold to record</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom nav bar (outside .phone-screen so it overlays) -->
+        <div class="bottom-nav">
+          <button class="nav-btn active" id="nav-feed" onclick="switchScreen('feed')">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Feed</span>
+          </button>
+          <button class="nav-btn" id="nav-camera" onclick="switchScreen('camera')">
+            <span class="nav-icon">🎥</span>
+            <span class="nav-label">Camera</span>
+          </button>
+        </div>
+
+        <div class="phone-home-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Feature section -->
+  <section class="features" id="how-it-works">
+    <div class="features-inner">
+      <h2>How it works</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="fc-icon">📱</div>
+          <h3>Real-time Feed</h3>
+          <p>Firestore stream ordered by <code>creationDate</code> pushes new videos to every connected device the instant they're uploaded — no polling, no refresh.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon">🗜️</div>
+          <h3>On-device Compression</h3>
+          <p>Before any byte leaves the phone, <strong>FFmpeg</strong> via <code>video_compress</code> shrinks the file to low-quality. Users get fast uploads; viewers get smooth streaming.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon">☁️</div>
+          <h3>Firebase Backend</h3>
+          <p>Compressed files land in <strong>Firebase Storage</strong>. The download URL and a timestamp go into <strong>Firestore</strong> under a UUID that links both records together.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon">🎥</div>
+          <h3>Camera Pipeline</h3>
+          <p>Long-press starts recording with a live circular progress indicator. Release stops it and shows a preview. A custom camera fork fixes audio recording on Android.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon">⬆️</div>
+          <h3>Upload from Gallery</h3>
+          <p>Tap the upload icon to pick any video from the device gallery. The same compression → Storage → Firestore pipeline runs automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon">▶️</div>
+          <h3>Vertical Swipe Player</h3>
+          <p>A <code>PageView</code> with vertical scroll snapping auto-plays each video. Tap to pause, tap again to resume. Progress bar overlay shows position.</p>
+        </div>
+      </div>
+
+      <div class="stack-section">
+        <h2>Tech stack</h2>
+        <div class="stack-grid">
+          <div class="stack-item"><strong>Flutter</strong><span>UI framework</span></div>
+          <div class="stack-item"><strong>Dart</strong><span>Language</span></div>
+          <div class="stack-item"><strong>Firestore</strong><span>Real-time DB</span></div>
+          <div class="stack-item"><strong>Firebase Storage</strong><span>File hosting</span></div>
+          <div class="stack-item"><strong>Cloud Functions</strong><span>Server-side</span></div>
+          <div class="stack-item"><strong>video_compress</strong><span>FFmpeg wrapper</span></div>
+          <div class="stack-item"><strong>video_player</strong><span>Playback</span></div>
+          <div class="stack-item"><strong>Provider</strong><span>State management</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by <a href="https://github.com/masfour7" target="_blank">Mohammad Asfour</a> &nbsp;·&nbsp;
+    <a href="https://github.com/masfour7/Social-Video-Streaming-App" target="_blank">Source on GitHub</a> &nbsp;·&nbsp;
+    MIT License</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
